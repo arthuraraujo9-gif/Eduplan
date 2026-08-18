@@ -1,0 +1,118 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background-color: #f8f9fc;
+}
+
+/* Cabeçalho */
+.header {
+    background: white;
+    padding: 40px 20px;
+    min-height: 100vh;
+}
+
+.header-inner {
+    max-width: 500px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 35px;
+    text-align: center;
+}
+
+/* LOGO BEM GRANDE NO MEIO */
+.logo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    text-decoration: none;
+}
+
+.logo img {
+    width: 220px;              /* bem maior */
+    height: 220px;
+    object-fit: contain;       /* não corta */
+}
+
+.logo h2 {
+    font-size: 34px;
+    font-weight: bold;
+    margin: 0;
+}
+
+.cine {
+    color: #b4182d;
+}
+
+.flow {
+    color: #123499;
+}
+
+/* MENU COM OS PONTINHOS • (igual do seu amigo) */
+.nav {
+    list-style: none;
+    text-align: left;
+    width: 100%;
+    max-width: 260px;
+    margin: 0 auto;
+}
+
+.nav li {
+    font-size: 18px;
+    margin: 14px 0;
+    padding-left: 10px;
+    position: relative;
+}
+
+.nav li::before {
+    content: "•";
+    color: #333;
+    font-size: 22px;
+    position: absolute;
+    left: -15px;
+    top: -2px;
+}
+
+.nav a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+}
+
+.nav a:hover {
+    color: #b4182d;
+}
+
+/* BOTÕES */
+.actions {
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.btn {
+    text-decoration: none;
+    padding: 12px 30px;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.btn-entrar {
+    border: 1px solid #ccc;
+    color: #333;
+    background: white;
+}
+
+.btn-cadastrar {
+    background: #2563eb;
+    color: white;
+}
