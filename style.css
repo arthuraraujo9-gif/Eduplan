@@ -13,32 +13,133 @@
     --cor-borda: #e5e7eb;
     --cor-fundo: #ffffff;
 }
+/*O "*" seleciona todos os elementos da paginas*/
+* {
+    box-sizing: border-box; /* faz o padding e a borda ficarem
+    dentro do tamanho do que a gente define pro elemento, e nao somados a ele*/
 
-*{
-    box-sizing: border-box;
+    /*reseta o espaçamento padrão do navegador*/
     margin: 0;
     padding: 0;
 }
 
-body{
-    font-family: "Inter", sans-serif; /* fonte do projeto*/
-    color: var(--texto-principal);
+body {
+    font-family: "Inter", sans-serif; /* tipo de fonte do projeto*/
+    color: var(--texto-principal); /* cor da fonte*/
 }
 
 .header {
     position: sticky; /* faz o cabeçalo "grudar no topo da tela"*/
     top: 0; /* coladinho no topo*/
+
     z-index: 100; /* ordem de empilhamento (camadas)*/
-    background-color: var(--cor-fundo);
-    border-bottom: 1px solid var(--cor-borda);
+
+    background-color: var(--cor-fundo); /*cor de fundo*/
+
+    border-bottom: 1px solid var(--cor-borda); /*borda inferior*/
 }
 
 .header-inner {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 24px;
+    max-width: 1200px; /* O conteudo nao ultrapassa 1200px de largura */
+
+    margin: 0 auto; /* margem 0 em cima/baixo e "auto" nas laterais  */
+
+    padding: 0 24px; /* espaço inteno: 0 em cima/baixo e 24px nas laterais */
+
+    /*aplicação do flexbox*/
+
+    display: flex; /*transforma essa div em um "container flexivel". isso é o que permite coloca logo, meno e botao um do lado do outro*/
+
+    align-items: center; /* alinha os itens no certro verticalmente dentro do herder*/
+
+    justify-content: space-between; /* distribui os itens: o primeiro cola na esquerda, o último cola na direita, e sobra espaço entre eles*/
+
+    gap: 24px; /*espaso minimo entre os itens (logo, menu e botões)*/
+}
+
+/*logo*/
+.logo {
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    gap: 24px;
-    }
+    gap: 8px;
+    font-size: 20px; /*tamanho da fonte*/
+    font-weight: 800;
+    color: var(--texto-principal);
+    text-decoration: none; /* essa linha renove o sublinhado que o navegador coloca em links por padrão*/
+}
+
+.logo img {
+    width: 80px; /* define a largura da imagem da logo. */
+}
+
+/*menu de navegação*/
+.nav {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+    list-style: none; /* o menu é uma lista (ui), e por padrão çistas mostram bolinhas antes de cada item, essa propriedade remove as bolinhas*/
+    /*zera espaçamentos padrçao que o navegador aplica em çistas*/
+    margin: 0;
+    padding: 0;
+}
+
+.nav a {
+    text-decoration: none;
+    color: var(--texto-secundario);
+    font-size: 15px;
+    font-weight: 500;
+    padding: 6px 0; /* um respiro em cim e embaixo do texto do link, facilitando o clique*/
+    transition: color .2s ease; /* diz ao navegador: quando a cor mudar (por exemplo no hover),
+     faça essa mudança suave , em 0,2 segundos, em vez de trpcar a cor de forma de brusca*/
+     white-space: nowrap; /* impede que o texto do link quebre em duas linhas caso o espaço fique apertado*/  
+}
+
+/*.hover é aolicado o mause passa por cima do link*/
+.nav a:hover {
+    color: var(--texto-principal);
+}
+/* botões (entra / cadastra)*/
+
+.axtions{
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+/*estilo base, compartilhado pelos dois botaos*/
+.btn {
+    font-family: inherit;
+    font-size: 14px;
+    font-weight: 600;
+    border-radius: 8px; /* arredonda os cantos do botao*/
+    padding: 10px 18px;
+    cursor: pointer;
+    border: 1px solid transparent;
+    text-decoration: none;
+
+    /*centaliçizam o texto dento do botao, tanto na horizontal quando na vertical*/
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+.btn-entrar{
+    background-color: var(--cor-fundo);
+    color: var(--texto-principal);
+    border-color: var(--cor-borda);
+}
+
+.btn-entrar:dover{
+    background-color: var(--verde);
+}
+
+
+
+.btn-Cadastrar{
+    background-color: var(--verde);
+    color: #fff,
+}
+
+.btn-Cadastrar:hover{
+    background-color: var(--verde-escuro);
+    
+}
