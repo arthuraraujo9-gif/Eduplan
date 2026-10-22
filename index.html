@@ -7,8 +7,13 @@
     <link rel="stylesheet" href="style.css">
     <!-- Importando a fonte do projeto -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+
+    <!-- biblioteca de icones do ggogle (material symbols) para usa um icone , basta escreve o nome dentro de um <span> <span clss="material-symbols-outlined">home</span>-->
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
 </head>
 <body>
+
+    <!-- HE-->
     <!-- <header> é uma tag semântica: ela existe especificamente para marcar o cabeçalho do site.
     class="header" conecta essa tag com o CSS -->
     <header class="header">
@@ -16,6 +21,7 @@
         <div class="header-inner">
             <a href="#" class="logo">
                 <img src="./assets/image.png" alt="Logo do Eduplan">
+                
 
                 <h2 style="color: #1D4ED8;">Edu <span style="color: #16A34A;">Plan</span></h2>
             </a>
@@ -42,6 +48,66 @@
             <button class="hamburguer" id="btn-menu">☰</button>
         </div>
     </header>
+
+    <!-- HERO -->
+     <!--"hero" e o nome da primeira secao do site, a "vitrine" 
+     <main> marca o conteudo principal da pagina (as proximas secoes tambem vao aqui dentro)-->
+        <main>
+            <!--section sao secoes do projeto -->
+            <section class="hero" id="inicio">
+                <!-- mesmo "envolope" do herder; limita a largura e organiza as duas colonas -->
+                <div class="hero-inner">
+
+                    <!-- coluna da esquerda; textos e botoes -->
+
+                    <div class="hero-texto">
+
+                        <span class="hero-etiqueta">plataforma para professores</span>
+                    </div>
+
+                    <!-- o texto esta escrito normal quem deixa em maiusculas e o css (text-transform) o <span> permite pitar so a palavra "inteligente" de azul-->
+                    <h1 class="hero-titulo">
+                        planejamento pedagógico <span>inteligente</span>
+                    </h1>
+                    <p class="hero-descricao">
+                        organoze planos de aula, acompanha turmas e centraliza sua rotina academica em um
+                        so lugar.
+                    </p>
+                    <div class="hero-botoes">
+                        <a href="#" class="btn btn-primario btn-grande">Começar agora</a>
+                        <a href="#" class="btn btn-contorno btn-grande">
+                            <span class="material-symbols-outlined">play_arrow</span>
+                            ver Recursos
+                        </a>
+                    </div>
+
+                    <!--faixa com as 3 vantagens-->
+
+                    <ul class="hero-vantagens">
+                        <li>
+                            <span class="material-symbols-outlined">verified_user</span>
+                            <p><strong>seguro</strong> seus dados protegidos</p>
+                        </li>
+                        <li>
+                            <span class="material-symbols-outlined">cloud</span>
+                            <p>Acesso em qualquer lugar</p>
+                        </li>
+                        <li>
+                            <span class="material-symbols-outlined">schedule</span>
+                            <p>Economize tempo</p>
+                        </li>
+
+                    </ul>
+                </div>
+                <img 
+                
+                src="./assets/dashboard.png" 
+                alt="tela do dashboard do Eduplan"
+                class="hero-imagem" 
+            >
+            </section>
+        </main>
+
 
     <script src="script.js"></script>
 </body>
