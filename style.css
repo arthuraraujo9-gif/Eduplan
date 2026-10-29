@@ -13,7 +13,15 @@ Vantagem: se quiser trocar uma cor, muda só aqui e ela é atualizada em todos o
     --texto-secundario: #475569;
     --cor-borda: #E5E7EB;
     --cor-fundo: #FFFFFF;
+
+    /*novas variaveis*/
+    --azul-marinho: #081e4f;
+    --azul-hover: #1e40af;   
+    --azul-claro: #DBEAFE;   
+    --fundo-suave: #F6F8ff;   
 }
+
+
 
 /* O "*" seleciona TODOS os elementos da página */
 * {
@@ -204,4 +212,93 @@ body {
     }
 }
 
+/*hero*/
+
+/*icones do google: deixamos o tamnho padrao menor e alinhado ao texto*/
+
+.material-symbols-outlined {
+    font-size: 20px;
+    line-height: 1;
+    display: inline-block;
+    width: 1em;
+    overflow: hidden;
+    white-space: nowrap;
+    flex-shrink: 0; /*o icone numca encolhe dentro de um flex*/
+}
+
+.hero {
+    background-color: var(--fundo-suave);
+    padding: 64px 9 80px;
+    border-bottom: 1px solid var(--cor-borda);
+}
+
+/*aqui usamos o grid, "irmao" do flexbox
+-> flexbox organiza em uma direcao; grid organiza em colunas e linhas*/
+.hero-inner{
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 24px;
+
+    display: grid;
+/*"fr" = fracao do espaco disponivel*/
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1, 2fr);
+    align-items: center;
+    gap: 48px;
+}
+/*coluna da esquerda*/
+.hero-etiqueta{
+    display: inline-block;
+    background-color: var(--azul-claro);
+    color: var(--azul-escuro);
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    padding: 6px 12px;
+    border-radius: 6px;
+    margin-bottom: 20px;
+}
+.hero-titulo{
+    color: var(--azul-marinho);
+    font-size: 54px;
+    font-weight: 800;
+    line-height: 1.05;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+.hero-titulo span {
+    color: var(--azul-escuro);
+    display: block;
+}
+.hero-descricao{
+    font-size: 18px;
+    line-height: 1.5;
+    color: var(--texto-secundario);
+    max-width: 44px;
+    margin-bottom: 32px;
+
+}
+.hero-botoes{
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin-bottom: 32px;
+
+}
+.btn-grande{
+    font-size: 15px;
+    padding: 14px 28px;
+    text-transform: uppercase;
+    gap: 8px;
+
+}
+.btn-primario{
+    background-color: var(--azul-escuro);
+    color: #fff;
+}
+.btn-contorno{
+    background-color: var(--cor-fundo);
+    color: var(--azul-escuro);
+    border: 1.5px solid var(--azul-escuro);
+}
 
